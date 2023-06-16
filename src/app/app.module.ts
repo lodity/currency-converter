@@ -6,10 +6,16 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 import { HttpClientModule } from '@angular/common/http';
 import { FilterCurrenciesPipe } from './pipes/filter-currencies.pipe';
 import { ConvertationComponent } from './components/convertation/convertation.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, NavigationComponent, FilterCurrenciesPipe, ConvertationComponent],
-  imports: [BrowserModule, HttpClientModule],
+  declarations: [
+    AppComponent,
+    NavigationComponent,
+    FilterCurrenciesPipe,
+    ConvertationComponent,
+  ],
+  imports: [BrowserModule, HttpClientModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

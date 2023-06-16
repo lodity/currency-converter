@@ -25,6 +25,13 @@ export class AppComponent implements OnInit {
     rate: 0,
     exchangedate: '',
   };
+  currencyUAH: ICurrency = {
+    cc: 'UAH',
+    r030: 0,
+    txt: '',
+    rate: 1,
+    exchangedate: '',
+  };
 
   constructor(public currencyService: CurrencyService) {}
 

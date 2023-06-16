@@ -1,1 +1,50 @@
-<p>convertation works!</p>
+<form [formGroup]="form" class="flex flex-col gap-2">
+  <div class="flex gap-1">
+    <input
+      (keyup)="convert(true)"
+      [value]="
+        (this.form.value.firstCurrencyValue | number: '0.0-2')
+          ?.toString()
+          ?.replaceAll(',', '')
+      "
+      type="number"
+      value="0"
+      formControlName="firstCurrencyValue"
+      class="rounded border"
+    />
+
+    <select
+      (change)="convert(true)"
+      formControlName="firstCurrencyName"
+      class="rounded border"
+    >
+      <option>UAH</option>
+      <option>USD</option>
+      <option>EUR</option>
+    </select>
+  </div>
+
+  <div class="flex gap-1">
+    <input
+      (keyup)="convert(false)"
+      [value]="
+        (this.form.value.secondCurrencyValue | number: '0.0-2')
+          ?.toString()
+          ?.replaceAll(',', '')
+      "
+      type="number"
+      formControlName="secondCurrencyValue"
+      class="rounded border"
+    />
+
+    <select
+      (change)="convert(true)"
+      formControlName="secondCurrencyName"
+      class="rounded border"
+    >
+      <option>UAH</option>
+      <option>USD</option>
+      <option>EUR</option>
+    </select>
+  </div>
+</form>
