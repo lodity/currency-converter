@@ -6,7 +6,7 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 import { HttpClientModule } from '@angular/common/http';
 import { FilterCurrenciesPipe } from './pipes/filter-currencies.pipe';
 import { ConvertationComponent } from './components/convertation/convertation.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,7 +15,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     FilterCurrenciesPipe,
     ConvertationComponent,
   ],
-  imports: [BrowserModule, HttpClientModule, ReactiveFormsModule],
+  imports: [BrowserModule, HttpClientModule, ReactiveFormsModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
